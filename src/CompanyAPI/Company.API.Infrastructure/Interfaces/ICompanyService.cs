@@ -1,8 +1,7 @@
-﻿
-using Company.API.Domain.BaseModel;
+﻿using Company.API.Domain.BaseModel;
 using Company.API.Domain.Entities;
 
-namespace Company.API.Infrastructure
+namespace Company.API.Infrastructure.Interfaces
 {
     public interface ICompanyService
     {

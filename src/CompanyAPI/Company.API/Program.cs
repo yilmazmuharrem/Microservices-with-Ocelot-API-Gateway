@@ -1,5 +1,5 @@
-using Company.API.Application;
-using Company.API.Infrastructure;
+using Company.API.Application.Services;
+using Company.API.Infrastructure.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 

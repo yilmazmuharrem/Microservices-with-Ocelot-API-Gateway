@@ -1,6 +1,6 @@
 ﻿using Company.API.Domain.BaseModel;
 using Company.API.Domain.Entities;
-using Company.API.Infrastructure;
+using Company.API.Infrastructure.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Company.API.Controllers

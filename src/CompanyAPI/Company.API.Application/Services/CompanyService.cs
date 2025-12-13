@@ -1,8 +1,8 @@
 ﻿using Company.API.Domain.BaseModel;
 using Company.API.Domain.Entities;
-using Company.API.Infrastructure;
+using Company.API.Infrastructure.Interfaces;
 
-namespace Company.API.Application
+namespace Company.API.Application.Services
 {
     public class CompanyService : ICompanyService
     {
@@ -15,7 +15,7 @@ namespace Company.API.Application
                 Result = new CompanyDto
                 {
                     CompanyName = "Organizer Ypas Test Firması",
-                    Id = new Random().Next(1,14),
+                    Id = new Random().Next(1, 14),
                     Sales = new List<int> { 52, 63, 52 }
                 }
             };

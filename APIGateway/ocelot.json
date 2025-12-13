@@ -7,8 +7,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 9000
+          "Host": "companyapi",
+          "Port": 80
         }
       ]
     },
@@ -19,8 +19,8 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 9001
+          "Host": "salesapi",
+          "Port": 80
         }
       ]
     }

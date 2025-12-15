@@ -23,6 +23,18 @@
           "Port": 80
         }
       ]
+    },
+    {
+      "UpstreamHttpMethod": [ "Get" ],
+      "UpstreamPathTemplate": "/s/company/{companyId}",
+      "DownstreamPathTemplate": "/api/Sales/{companyId}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "salesapi",
+          "Port": 80
+        }
+      ]
     }
   ],
   "GlobalConfiguration": {

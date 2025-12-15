@@ -21,5 +21,14 @@ namespace Sales.API.Controllers
             return _salesService.GetSalesById(Id);
         }
 
+
+        [HttpGet("company/{companyId}")]
+
+        public SalesDto GetByCompanyId(int companyId)
+        {
+            return _salesService.GetSalesById(companyId);
+        }
+
+
     }
 }

@@ -16,5 +16,12 @@ namespace Sales.API.Application.Services
                 SellerNameSurname = "Muharrem Y"
             };
         }
+
+        public List<int> GetByCompanyId(int companyId)
+        {
+            return new List<int> { 10, 20, 30 };
+
+        }
+
     }
 }

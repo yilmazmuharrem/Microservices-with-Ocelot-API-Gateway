@@ -15,8 +15,8 @@ namespace Company.API.Controllers
             _companyService = companyService;
         }
 
-        [HttpGet("{Id}")]
-        public GlobalResultDto<CompanyDto> Get(int Id)
+        [HttpGet("{id}")]
+        public GlobalResultDto<CompanyDto> Get(int id)
         {
             return _companyService.GetCompany(1);
         }

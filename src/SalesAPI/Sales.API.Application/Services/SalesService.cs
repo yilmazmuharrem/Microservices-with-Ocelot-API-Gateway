@@ -17,9 +17,9 @@ namespace Sales.API.Application.Services
             };
         }
 
-        public List<int> GetByCompanyId(int companyId)
+        public List<int> GetByCompanyId(int Id)
         {
-            return new List<int> { 10, 20, 30 };
+            return new List<int> { Id, 20, 30 };
 
         }
 

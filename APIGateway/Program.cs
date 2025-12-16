@@ -1,3 +1,4 @@
+using APIGateway.Handlers;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 
@@ -11,6 +12,7 @@ builder.Configuration
 
 
 builder.Services.AddOcelot(builder.Configuration);
+builder.Services.AddSingleton<CompanySalesAggregator>();
 
 var app = builder.Build();
 

@@ -6,6 +6,6 @@ namespace Sales.API.Infrastructure.Interfaces
     {
         public SalesDto GetSalesById(int Id);
 
-        List<int> GetByCompanyId(int companyId);
+        List<int> GetByCompanyId(int Id);
     }
 }

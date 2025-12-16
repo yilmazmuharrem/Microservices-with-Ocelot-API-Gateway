@@ -14,19 +14,19 @@ namespace Sales.API.Controllers
             _salesService = salesService;
         }
 
-        [HttpGet("{Id}")]
+        [HttpGet("{id}")]
 
-        public SalesDto Get(int Id)
+        public SalesDto Get(int id)
         {
-            return _salesService.GetSalesById(Id);
+            return _salesService.GetSalesById(id);
         }
 
 
-        [HttpGet("company/{companyId}")]
+        [HttpGet("company/{id}")]
 
-        public SalesDto GetByCompanyId(int companyId)
+        public SalesDto GetByCompanyId(int id)
         {
-            return _salesService.GetSalesById(companyId);
+            return _salesService.GetSalesById(id);
         }
 
 

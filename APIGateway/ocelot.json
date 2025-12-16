@@ -1,9 +1,10 @@
 {
   "Routes": [
     {
+      "Key": "CompanyById",
       "UpstreamHttpMethod": [ "Get" ],
-      "UpstreamPathTemplate": "/c/{Id}",
-      "DownstreamPathTemplate": "/api/Company/{Id}",
+      "UpstreamPathTemplate": "/c/{id}",
+      "DownstreamPathTemplate": "/api/Company/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -13,9 +14,10 @@
       ]
     },
     {
+      "Key": "SalesById",
       "UpstreamHttpMethod": [ "Get" ],
-      "UpstreamPathTemplate": "/s/{Id}",
-      "DownstreamPathTemplate": "/api/Sales/{Id}",
+      "UpstreamPathTemplate": "/s/{id}",
+      "DownstreamPathTemplate": "/api/Sales/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -25,9 +27,10 @@
       ]
     },
     {
+      "Key": "SalesByCompanyId",
       "UpstreamHttpMethod": [ "Get" ],
-      "UpstreamPathTemplate": "/s/company/{companyId}",
-      "DownstreamPathTemplate": "/api/Sales/{companyId}",
+      "UpstreamPathTemplate": "/s/company/{id}",
+      "DownstreamPathTemplate": "/api/Sales/company/{id}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
@@ -37,6 +40,18 @@
       ]
     }
   ],
+
+  "Aggregates": [
+    {
+      "UpstreamPathTemplate": "/company-with-sales/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "Aggregator": "CompanySalesAggregator",
+      "RouteKeys": [ "CompanyById", "SalesByCompanyId" ]
+    }
+  ],
+
+
+
   "GlobalConfiguration": {
     "BaseUrl": "http://localhost:9002"
   }
